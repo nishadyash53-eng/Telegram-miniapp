@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Earno AI Bot Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button id="backBtn" class="icon-btn">←</button>
+      <div class="title">Earno Ai Bot Dashboard</div>
+      <button id="moreBtn" class="icon-btn">⋯</button>
+    </header>
+
+    <main>
+      <section class="balance-card card">
+        <div class="profile">
+          <img src="logo.png" alt="logo" class="logo"/>
+          <div class="balance-block">
+            <div class="balance-amount" id="balanceText">$0.00</div>
+            <button id="withdrawBtn" class="btn btn-orange">Withdraw →</button>
+          </div>
+        </div>
+
+        <div class="promo">
+          <div>WEEKEND EARN FAST</div>
+          <div class="promo-right">
+            <div>Earn 30%</div>
+            <button class="btn btn-small">LET'S GO</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tp-card card">
+        <div class="tp-header">
+          <div>TP (Trade Power) <span class="info">i</span></div>
+          <button id="refreshBtn" class="icon-refresh">⟳</button>
+        </div>
+
+        <div class="tp-main">
+          <div class="tp-value" id="tpValue">$1.00</div>
+          <div class="daily">Daily Earn: <strong id="dailyEarn">$0.06</strong> <button class="btn-link">History</button></div>
+          <div class="timer" id="tpTimer">Time left : 01h 35m 59s</div>
+          <div class="tp-actions">
+            <button id="buyTp" class="btn btn-green">Buy TP</button>
+            <button id="referBtn" class="btn btn-pink">$10 Refer & Earn</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="roi card">
+        <h3>Return on Investment in Earno Ai Bot</h3>
+        <div class="roi-table">
+          <div class="row"><div>TP Purchased</div><div>Daily Return</div></div>
+          <div class="row muted"><div>$1</div><div>6%</div></div>
+        </div>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn active">Home</button>
+      <button class="nav-btn">Buy TP</button>
+      <button class="nav-btn">Refer</button>
+      <button class="nav-btn">Withdraw</button>
+      <button class="nav-btn">About</button>
+    </nav>
+
+    <!-- QR deposit modal -->
+    <div id="qrModal" class="modal hidden">
+      <div class="modal-content">
+        <h4>Deposit / Scan QR</h4>
+        <img id="qrImage" src="placeholder-qr.png" alt="qr" />
+        <p id="qrAddr"></p>
+        <button id="closeQr" class="btn">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
